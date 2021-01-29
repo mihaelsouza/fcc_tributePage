@@ -2,27 +2,33 @@ html {
   /* Set a base font size for the page, so we can
   use relative units easily on different elements */
   font-size: 10px;
-}
-
-#main {
-  display: grid;
-  grid-template-rows: 2fr 7fr 1fr;
   text-align: center;
 }
 
 #tribute-info {
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  grid-row-gap: 2em;
-  margin: 0 10% 2.5% 10%;
-  align-items: center;
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  row-gap: 2em;
+  margin: 2.5% 10% 2.5% 10%;
 }
 
 .item-box {
+  height: min-content;
   font-size: 2em;
   border-radius: 1em;
   background-color: rgba(0, 0, 0, 0.15);
   box-shadow: .5em .5em 1em .5em rgba(0, 0, 0, 0.25), -.5em .5em 1em .5em rgba(0, 0, 0, 0.25);
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: .2em;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.5em;
 }
 
 body {
@@ -53,10 +59,10 @@ hr {
   width: 85%;
   border: 0;
   height: .2em;
-  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #000, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #000, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #000, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #000, #f0f0f0);
 }
 
 a {
@@ -67,4 +73,9 @@ a {
 
 a:hover {
   color: rgb(255, 0, 0);
+}
+
+span {
+  font-style: italic;
+  font-size: .8em;
 }
