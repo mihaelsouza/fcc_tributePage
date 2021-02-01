@@ -2,37 +2,14 @@ html {
   /* Set a base font size for the page, so we can
   use relative units easily on different elements */
   font-size: 10px;
-  text-align: center;
-}
-
-#tribute-info {
-  display: flex;
-  width: 80%;
-  flex-direction: column;
-  row-gap: 2em;
-  margin: 2.5% 10% 2.5% 10%;
-}
-
-.item-box {
-  height: min-content;
-  font-size: 2em;
-  border-radius: 1em;
-  background-color: rgba(0, 0, 0, 0.15);
-  box-shadow: .5em .5em 1em .5em rgba(0, 0, 0, 0.25), -.5em .5em 1em .5em rgba(0, 0, 0, 0.25);
-}
-
-.image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: .2em;
-  max-width: 100%;
-  height: auto;
-  border-radius: 1.5em;
 }
 
 body {
   background-color: rgba(51, 135, 204,   .25);
+}
+
+header, footer {
+  text-align: center;
 }
 
 h1 {
@@ -72,10 +49,43 @@ a {
 }
 
 a:hover {
-  color: rgb(255, 0, 0);
+  color: rgb(0, 0, 255);
 }
 
-span {
+figcaption {
   font-style: italic;
   font-size: .8em;
+  text-align: center;
+}
+
+#tribute-info {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  row-gap: 2em;
+  margin: 2.5% 10% 2.5% 10%;
+}
+
+.item-box {
+  height: min-content;
+  font-size: 2em;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.15);
+  box-shadow: .5em .5em 1em .5em rgba(0, 0, 0, 0.25), -.5em .5em 1em .5em rgba(0, 0, 0, 0.25);
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: .2em;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.5em;
+}
+
+.tribute-text {
+  font-size: 1.25em;
+  text-align: justify;
+  margin: 0 5% 2.5% 5%;
 }
