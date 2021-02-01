@@ -82,6 +82,7 @@ figcaption {
   max-width: 100%;
   height: auto;
   border-radius: 1.5em;
+  cursor: pointer; /* Changes cursor to pointer when over images */
 }
 
 .tribute-text {

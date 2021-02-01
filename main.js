@@ -76,8 +76,8 @@ const cardData = {
   }
 };
 
-var fillContentInDiv = function (cardData, divName) {
-  let data = cardData[divName][cardData[divName]['state']];
+var fillContentInDiv = function (dataIn, divName) {
+  let data = dataIn[divName][dataIn[divName]['state']];
   var figure = document.createElement('figure');
   var image = document.createElement('img');
   var figcaption = document.createElement('figcaption');
@@ -92,6 +92,11 @@ var fillContentInDiv = function (cardData, divName) {
   image.classList.add('image');
   image.src = data['src'];
   image.alt = data['alt'];
+  image.onclick = function () {
+    // Enables onclick functionality to change the image and text within each card
+    document.getElementById(divName).innerHTML = ""; // Clear current content
+    fillContentInDiv(cardData, divName); // Fills with content for alternate state
+  }
   figure.appendChild(image);
 
   // Add copyright information to the figcaption
@@ -108,7 +113,9 @@ var fillContentInDiv = function (cardData, divName) {
   document.getElementById(divName).appendChild(paragraph);
 
   // Change the active state
-  //data['state'] === "A" ? data['state'] = 'B' : data['state'] = 'A';
+  cardData[divName]['state'] === "A" ?
+    cardData[divName]['state'] = 'B' :
+    cardData[divName]['state'] = 'A';
 }
 
 document.addEventListener('DOMContentLoaded', function () {
