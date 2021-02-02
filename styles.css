@@ -90,3 +90,33 @@ figcaption {
   text-align: justify;
   margin: 0 5% 2.5% 5%;
 }
+
+.anim-rotate {
+  animation: rotateIn 1s ease;
+}
+
+@keyframes rotateIn {
+  0% {
+      opacity: 0;
+      transform: rotateY(180deg)
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.anim-slide {
+  animation: slide-up 1s ease;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
