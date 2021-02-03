@@ -19,13 +19,13 @@ const cardData = {
       src: "media/card2A.jpg",
       alt: "Company employees discussing strategy in a meeting room.",
       cc0: '<span class="cc0">Photo by <a target="_blank" href="https://unsplash.com/@youxventures?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">You X Ventures</a> on <a target="_blank" href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span><br><br>',
-      text: "<center><strong>Office Environments</strong></center><br>Typical office day. Endless meetings and noise around the cubicles while you are trying to hammer away that last deliverable before the end of day deadline. You have already heard about the latest office gossip through the grapevine and Carol told you about that amazing weekend she is planning around the watercooler, while overhearing Bob talk about last night's game. At this point, all you can think about is getting home..."
+      text: "<center><strong>The Office</strong></center><br>Typical office day. Endless meetings and noise around the cubicles while you are trying to hammer away that last deliverable before the end of day deadline. You have already heard about the latest office gossip through the grapevine and Carol told you about that amazing weekend she is planning around the watercooler, while overhearing Bob talk about last night's game. At this point, all you can think about is getting home..."
     },
     B: {
       src: "media/card2B.jpg",
       alt: "Computer over a table next to a rustic mug. In the computer screen, a zoom meeting with more than a dozen participants.",
       cc0: '<span>Photo by <a href="https://unsplash.com/@cwmonty?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Chris Montgomery</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span><br><br>',
-      text: "<center><strong>Office Environments</strong></center><br>And now, you're always home. ALWAYS... There is no longer that sense of 'getting home from work' as that is essentially just the other room. Or even worse, the bedroom is suddenly the office. Work and life boundaries get blurried. For some, this is heaven. For others, a particularly nasty nightmare. For almost everybody, a necessary adaptation."
+      text: "<center><strong>The Office</strong></center><br>And now, you're always home. ALWAYS... There is no longer that sense of 'getting home from work' as that is essentially just the other room. Or even worse, the bedroom is suddenly the office. Work and life boundaries get blurried. For some, this is heaven. For others, a particularly nasty nightmare. For almost everybody, a necessary adaptation."
     },
     state: "A"
   },
@@ -126,7 +126,7 @@ var fillContentInDiv = function (dataIn, divName, state) {
 // bar and grant direct access to each card information
 var expandNavBar = function () {
   var navbar = document.getElementById('nav-bar');
-  navbar.setAttribute('style', 'height: 255px');
+  navbar.setAttribute('style', 'height: min-content');
 }
 
 var retractNavBar = function () {
