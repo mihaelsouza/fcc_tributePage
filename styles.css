@@ -94,11 +94,20 @@ figcaption {
 }
 
 .item-box {
+  display: inline-flex;
+  align-items: center;
+  flex-flow: row;
   height: min-content;
   font-size: 2em;
   border-radius: 1em;
   background-color: rgba(0, 0, 0, 0.15);
   box-shadow: .5em .5em 1em .5em rgba(0, 0, 0, 0.25), -.5em .5em 1em .5em rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1200px) {
+  .item-box {
+    flex-flow: column;
+  }
 }
 
 .image {
@@ -112,10 +121,22 @@ figcaption {
   cursor: pointer; /* Changes cursor to pointer when over images */
 }
 
+@media (min-width: 500px) {
+  .image {
+    max-width: 500px;
+  }
+}
+
 .tribute-text {
-  font-size: 1.25em;
+  font-size: 1.5em;
   text-align: justify;
   margin: 0 5% 2.5% 5%;
+}
+
+@media (max-width: 500px) {
+  .tribute-text {
+    font-size: 1em;
+  }
 }
 
 .anim-rotate {
