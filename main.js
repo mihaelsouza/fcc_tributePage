@@ -86,7 +86,7 @@ var fillContentInDiv = function (dataIn, divName, state) {
   // Set the necessary id for the first figure to pass the test units in freeCodeCamp
   divName === 'card1' ? figure.id = 'img-div' : {};
   divName === 'card1' ? image.id = 'image' : {};
-  divName === 'card1' ? figcaption.id = 'img-caption' : {};
+  divName === 'card1' ? figcaption.id = 'img-caption' : figcaption.id = `img-caption${divName.slice(-1)}`;
 
   // Set the necessary attributes in image to style and give content to the tag
   if (!state) {image.classList.add('anim-rotate');}
@@ -119,9 +119,21 @@ var fillContentInDiv = function (dataIn, divName, state) {
   cardData[divName]['state'] === "A" ?
     cardData[divName]['state'] = 'B' :
     cardData[divName]['state'] = 'A';
-  firstState = false;
 }
 
+// Create a set of events to expand and retract the navigation
+// bar and grant direct access to each card information
+var expandNavBar = function () {
+  var navbar = document.getElementById('nav-bar');
+  navbar.setAttribute('style', 'height: 255px');
+}
+
+var retractNavBar = function () {
+  var navbar = document.getElementById('nav-bar');
+  navbar.setAttribute('style', 'height: 40px');
+}
+
+// Fill the card content on page load
 document.addEventListener('DOMContentLoaded', function () {
   for (i=1; i<6; i++) {
     fillContentInDiv(cardData, `card${i}`, true);

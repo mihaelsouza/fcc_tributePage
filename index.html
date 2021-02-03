@@ -18,36 +18,47 @@
   </head>
 
   <body>
-    <main id="main" class="container">
-      <header id="header">
-        <h1 id="title">Society, 2019</h1>
-        <h2>A Tribute to the Pre-COVID Era</h2>
-        <p>The world has changed and most of us miss what was left behind.<br>
-          What are some of the changes that the Coronavirus has brought about?<br>
-          <strong>Click on the images below to see what changed!</strong>
-        </p>
-        <hr>
-      </header>
+    <nav id="nav-bar">
+      <a href="#header">Start</a>
+      <div class='extended-nav' onmouseover="expandNavBar()" onmouseout="retractNavBar()">
+        <a href="#tribute-info">Card Info</a>
+        <a href="#card1">Masks</a>
+        <a href="#card2">Office</a>
+        <a href="#card3">Night Life</a>
+        <a href="#card4">Travels</a>
+        <a href="#card5">Holidays</a>
+      </div>
+      <a href="#footer">Disclaimer</a>
+    </nav>
 
-      <section id="tribute-info">
-        <!-- Div contents added dynamically by main.js -->
-        <div id="card1" class="item-box"></div>
-        <div id="card2" class="item-box"></div>
-        <div id="card3" class="item-box"></div>
-        <div id="card4" class="item-box"></div>
-        <div id="card5" class="item-box"></div>
-      </section>
+    <header id="header">
+      <h1 id="title">Society, 2019</h1>
+      <h2>A Tribute to the Pre-COVID Era</h2>
+      <p>The world has changed and most of us miss what was left behind.<br>
+        What are some of the changes that the Coronavirus has brought about?<br>
+        <strong>Click on the images below to see what changed!</strong>
+      </p>
+      <hr>
+    </header>
 
-      <footer id="footer">
-        <hr>
-        <h3>
-          <strong>Disclaimer</strong>: this is meant as a tongue-in-cheek website.
-          COVID is a serious disease that has impacted a lot of families.<br>
-          To get up-to-date information about COVID19, visit the website from the
-          <a id="tribute-link" target="_blank" href="https://www.who.int/health-topics/coronavirus#tab=tab_1">
-            World Health Organization</a>.
-        </h3>
-      </footer>
+    <main id="tribute-info" class="container">
+      <!-- Div contents added dynamically by main.js -->
+      <div id="card1" class="item-box"></div>
+      <div id="card2" class="item-box"></div>
+      <div id="card3" class="item-box"></div>
+      <div id="card4" class="item-box"></div>
+      <div id="card5" class="item-box"></div>
     </main>
+
+    <footer id="footer">
+      <hr>
+      <h3>
+        <strong>Disclaimer</strong>: this is meant as a tongue-in-cheek website.
+        COVID is a serious disease that has impacted a lot of families.<br>
+        To get up-to-date information about COVID19, visit the website from the
+        <a id="tribute-link" target="_blank" href="https://www.who.int/health-topics/coronavirus#tab=tab_1">
+          World Health Organization</a>.
+      </h3>
+    </footer>
   </body>
 </html>
