@@ -15,6 +15,7 @@ nav {
   top: 0;
   left: 0;
   height: 40px;
+  padding: 0 10px 0 50px;
   background-color: #333;
   opacity: .75;
   border-radius: 0 0 5em 0;
@@ -137,6 +138,11 @@ figcaption {
   .tribute-text {
     font-size: 1em;
   }
+}
+
+.tribute-text-block {
+  display: flex;
+  flex-flow: column;
 }
 
 .anim-rotate {
