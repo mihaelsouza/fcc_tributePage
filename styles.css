@@ -47,10 +47,15 @@ h2 {
 h3 {
   color: hsl(0, 0%, 20%);
   font-size: 1.5em;
+  margin: 0;
 }
 
 p {
   font-size: 2em;
+}
+
+header p, footer p {
+  margin: 0;
 }
 
 hr {
